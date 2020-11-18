@@ -2,12 +2,71 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>form-demo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/template.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <form>
+      <label for="city">What city do you live in?</label>
+      <input type="text" id="city" name="city" autofocus>
+      <label for="province">Select your province</label>
+      <select name="province" id="province" required>
+        <option value="">Please select a province</option>
+        <option value="AB" selected>Alberta</option>
+        <option value="ON" disabled>Ontario</option>
+        <option value="YK">Yukon</option>
+      </select>
+
+      <label for="birthday">What's your birthday?</label>
+      <input type="date" id="birthday" name="birthday" min="2000-12-31">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="234-456-6678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+      <label for="email"></label>
+      <input type="email" id="email" name="email">
+
+      <label for="visited-countries">How many countries/provinces have you visited?</label>
+      <input type="number" id="visited-countries" name="visited-countries" min="1" max="10">
+
+      <label for="url">Website Address</label>
+      <input type="url" id="url" name="url" placeholder="http://www.cbc.ca">
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" required></textarea>
+
+      <fieldset>
+        <legend>Do you like pizza?</legend>
+        <input type="radio" name="pizza" value="yes" id="pizza-yes">
+        <label for="pizza-yes">Yes</label>
+        <input type="radio" name="pizza" value="no" id="pizza-no">
+        <label for="pizza-no">No</label>
+        <input type="radio" name="pizza" value="undecided" id="pizza-undecided">
+        <label for="pizza-undecided">Undecided</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>What pizza toppings do you prefer?</legend>
+        <input type="checkbox" name="toppings" value="Pineapple" id="pineapple">
+        <label for="pineapple">Pineapple</label>
+
+        <input type="checkbox" name="toppings" value="Ham" id="ham">
+        <label for="ham">Ham</label>
+
+        <input type="checkbox" name="toppings" value="Bacon" id="bacon">
+        <label for="bacon">Bacon</label>
+
+        <input type="checkbox" name="toppings" value="Tomato" id="tomato">
+        <label for="tomato">Tomato</label>
+
+        <input type="checkbox" name="toppings" value="Mushroom" id="mushroom">
+        <label for="mushroom">Mushroom</label>
+      </fieldset>
+
+      <input type="submit" name="submit" value="Click me!">
+    </form>
   </body>
 </html>
